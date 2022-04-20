@@ -1,0 +1,40 @@
+<template>
+    
+    <lightning-card title="ToDo">
+        <b>Test2</b>
+        <template if:true={peremen.data}>
+            
+            <template for:each={peremen.data} for:item=tods>
+                <p key={tods.Id}>
+                <lightning-accordion class="example-accordion"
+                         onsectiontoggle={handleToggleSection}
+                         active-section-name="B">
+                         <lightning-accordion-section name={tods.ToDo__r.Name} label={tods.ToDo__r.Name}>
+                            <b>{tods.Name}</b>
+                            
+                             
+                        </lightning-accordion-section>
+                        </lightning-accordion>
+
+                    <lightning-button-menu slot="actions"
+                    alternative-text="Show menu"
+                    icon-size="x-small"
+                    menu-alignment="right">
+                    <lightning-menu-item value="New" label="Delete"></lightning-menu-item>
+                    <lightning-menu-item value="Edit" label="Edit"></lightning-menu-item>
+
+        
+         </lightning-button-menu>
+                    
+                </p>
+                
+            </template>
+            
+   
+        </template>
+     
+    </lightning-card>
+
+</template>
+
+

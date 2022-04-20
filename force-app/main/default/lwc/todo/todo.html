@@ -1,0 +1,12 @@
+<template>
+
+    <lightning-card title="ToDo">
+        <template if:true={ToDO.data}>
+            <template for:each={ToDo.data} for:item=tod>
+                <p key={tod.Id}>
+                    <b>{tod.Name}</b>
+                </p>
+            </template>
+        </template>
+    </lightning-card>   
+</template>
